@@ -1,2 +1,4 @@
 # Codekata
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+🧑‍💻 알고리즘 코드카타란??
+
+코드카타란 반복되는 연습이라는 뜻을 가진 `Kata` 와 연결하여 "매일매일 코딩을 반복하여 연습한다"는 의미입니다.
