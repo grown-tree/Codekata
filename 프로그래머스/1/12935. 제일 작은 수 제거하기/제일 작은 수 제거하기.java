@@ -1,28 +1,14 @@
+import java.util.Arrays;
 class Solution {
     public int[] solution(int[] arr) {
         
-        int[] answer = new int[arr.length -1];
-        int minNum = 0;
-        int index = 0;
+        if (arr.length <= 1) return new int[]{-1};
+
+        // 1. 최솟값을 찾는다
+        int min = Arrays.stream(arr).min().getAsInt();
         
-        if (arr.length == 1) {
-            return new int[]{-1};
-        }else{
-            minNum = arr[0];
-            for(int i = 1;i<arr.length;i++){
-                if(minNum>arr[i]){
-                    minNum = arr[i];
-                }
-            }
-            
-            for (int i = 0; i < arr.length; i++) {
-                
-                if (arr[i] == minNum) {
-                    continue;
-                }
-                answer[index++] = arr[i];
-            }
-            return answer;
-        }
+        // 2. 최솟값만 제외하고(filter) 나머지를 배열로 만든다
+        return Arrays.stream(arr).filter(i -> i != min).toArray();
+        
     }
 }
