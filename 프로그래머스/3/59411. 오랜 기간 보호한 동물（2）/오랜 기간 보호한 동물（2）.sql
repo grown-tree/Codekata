@@ -1,0 +1,11 @@
+-- 코드를 입력하세요
+SELECT
+O.ANIMAL_ID,
+O.NAME
+from
+ANIMAL_INS I
+join
+ANIMAL_OUTS O
+on I.ANIMAL_ID = O.ANIMAL_ID
+order by(O.DATETIME - I.DATETIME) desc
+limit 2;
